@@ -128,7 +128,7 @@ table {
 
 html,
 body {
-  min-width: 430px;
+  min-width: 300px;
   color: #000000;
   font-family: "Gilroy", Arial, "sans-serif";
   font-size: calc(14px + 0.2083333333vw);
