@@ -59,10 +59,10 @@
   height: 14px;
   padding: 10px;
   z-index: 10;
-  background: center url("../image/close-icon.svg") no-repeat;
+  background: center url("/assets/image/close-icon.svg") no-repeat;
 }
 .popup__close-btn--light {
-  background: center url("../image/close-icon--light.svg") no-repeat;
+  background: center url("/assets/image/close-icon--light.svg") no-repeat;
 }
 .popup__btn {
   display: flex;
@@ -175,6 +175,11 @@
   border: 1px solid #3075FC;
 }
 
+@media (min-width: 1200px) {
+  .filter-buttons__btn {
+    font-size: 14px;
+  }
+}
 .nav__search-with-filter {
   display: flex;
   gap: 10px;
@@ -201,7 +206,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: center url("../image/search.svg") no-repeat;
+  background: center url("/assets/image/search.svg") no-repeat;
 }
 .nav__search-input {
   width: 100%;
@@ -267,11 +272,11 @@
   height: 10px;
   padding: 0 10px;
   padding-top: 13px;
-  background: bottom url("../image/mini-top-arrow.svg") no-repeat;
+  background: bottom url("/assets/image/mini-top-arrow.svg") no-repeat;
 }
 .nav__search-counter-btn#dec-count {
   bottom: 0;
-  background: top url("../image/mini-down-arrow.svg") no-repeat;
+  background: top url("/assets/image/mini-down-arrow.svg") no-repeat;
 }
 .nav__links-wrapper {
   display: flex;
@@ -306,7 +311,35 @@
   width: 100%;
 }
 
+@media (min-width: 1200px) {
+  .catalog-category-card {
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 340px;
+    border-radius: 10px;
+  }
+  .catalog-category-card__img {
+    max-width: 100%;
+    max-height: 210px;
+  }
+  .catalog-category-card > p {
+    padding: 0 24px 24px 24px;
+  }
+  .catalog-category-card--big {
+    max-width: unset;
+    background-color: unset;
+  }
+  .catalog-category-card--big > .catalog-category-card__img {
+    max-height: 350px;
+    border-radius: 10px;
+  }
+  .catalog-category-card--big > p {
+    padding-left: 0;
+  }
+}
 .info-text {
+  height: 100%;
   padding: 0 20px 21px 20px;
   font-weight: 500;
   border-radius: 10px;
@@ -331,13 +364,32 @@
   margin-top: 7px;
 }
 
+@media (min-width: 1200px) {
+  .info-text {
+    padding: 0 71px 53px 46px;
+  }
+  .info-text__header {
+    flex-direction: column-reverse;
+  }
+  .info-text__title {
+    max-width: 446px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+    padding: 0;
+    font-size: 36px;
+  }
+  .info-text__img {
+    width: 311px;
+    margin-top: 24px;
+  }
+}
 .filter-btn {
   position: relative;
   width: 50px;
   height: 40px;
   border-radius: 40px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0509803922);
-  background: center url("../image/filter-icon.svg") no-repeat;
+  background: center url("/assets/image/filter-icon.svg") no-repeat;
 }
 
 .product-size-card {
@@ -373,7 +425,7 @@
   right: 3px;
   width: 10px;
   height: 10px;
-  background: center url("../image/bell.svg") no-repeat;
+  background: center url("/assets/image/bell.svg") no-repeat;
 }
 .product-size-card--less::before {
   content: "";
@@ -382,7 +434,7 @@
   right: 3px;
   width: 10px;
   height: 10px;
-  background: center url("../image/less.svg") no-repeat;
+  background: center url("/assets/image/less.svg") no-repeat;
 }
 .product-size-card.selected {
   border: 1.5px solid #000000;
@@ -476,9 +528,45 @@
   gap: 10px;
   margin: 17px 15px 0 15px;
 }
-.main__info-text {
-  margin: 17px 18px 0 12px;
-}
 .main__communication-blocks-wrapper {
-  margin-top: 14px;
+  flex-direction: column;
+  margin-top: 27px;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    margin: 0;
+  }
+  .header__logo-and-basket-wrapper, .header__breadcrumbs, .header > .nav {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .main__feedback-sections {
+    margin-top: 41px;
+  }
+  .main__catalog-categories-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 26px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .main__filter-buttons {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .main__filter-buttons {
+    display: inline-flex;
+  }
+  .main__filter-buttons > .filter-buttons__btn {
+    flex: none;
+  }
+  .main__info-text {
+    margin: 0;
+  }
+  .main__communication-blocks-wrapper {
+    flex-direction: row;
+  }
 }

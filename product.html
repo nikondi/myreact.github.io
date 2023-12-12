@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Страница товара</title>
-	<base href="/myreact.github.io/"/>
 
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
@@ -22,14 +21,14 @@
 
 <body>
     <div class="top-block color-white bg-black">
-        <a class="top-block__text mb-s fs-xss">
-            Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
-        </a>
-    </div>
+    <a class="top-block__text fs-xss">
+        Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
+    </a>
+</div>
 
     <header class="header mx-m">
         <div class="header__logo-and-basket-wrapper my-m">
-    <a href="/myreact.github.io/" class="logo">myreact</a>
+    <a href="/" class="logo">myreact</a>
     <button class="header__basket bg-second-gray"></button>
 </div>
 
@@ -103,27 +102,42 @@
     </header>
 
     <main class="main">
-        <div class="main__product-preview product-preview">
-            <!-- <section class="product-preview__header">
-                <h3 class="fs-s fw-800">Nike Air Max SC</h3>
+        <div class="product-data-wrapper">
+            <div class="main__product-preview product-preview">
+                <section class="product-preview__header">
+                    <div class="product-preview__title-block">
+                        <h3 class="fs-s fw-800">Nike Air Max SC</h3>
 
-                <div class="product-preview__info-wrapper">
-                    <div>
-                        <p class="product-preview__price fs-l fw-500">48 060</p>
-                        <p class="product-preview__price-old fs-m fw-300">67 060</p>
+                        <div class="product-preview__stars-wrapper">
+                            <ul class="stars-wrapper">
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start--light"></li>
+                            </ul>
+
+                            <span class="fw-400 ml-s">1236</span>
+                        </div>
                     </div>
 
-                    <div class="product-preview__btn-wrapper">
-                        <button class="product-preview__star-btn"></button>
-                        <button class="product-preview__like-btn"></button>
+                    <div class="product-preview__info-wrapper">
+                        <div>
+                            <p class="product-preview__price fs-l fw-500">48 060</p>
+                            <p class="product-preview__price-old fs-m fw-300">67 060</p>
+                        </div>
+
+                        <div class="product-preview__btn-wrapper">
+                            <button class="product-preview__star-btn"></button>
+                            <button class="product-preview__like-btn"></button>
+                        </div>
                     </div>
-                </div>
 
-                <p class="fs-xxs">или 4 платежа по 5 200₽ <span
-                        class="product-preview__highlight-payment-info-text">долями</span></p>
-            </section> -->
+                    <p class="fs-xxs">или 4 платежа по 5 200₽ <span
+                            class="product-preview__highlight-payment-info-text">долями</span></p>
+                </section>
 
-            <!-- <div class="product-preview__promotion-banner">
+                <!-- <div class="product-preview__promotion-banner">
                 <p class="product-preview__discount fw-800">35</p>
 
                 <p class="product-preview__discount-info fs-xxs fw-500">
@@ -136,161 +150,172 @@
                 <button class="product-preview__promotion-banner-close-btn" onclick="hideParent(this)"></button>
             </div> -->
 
-            <div class="discount-timer">
-                <p class="discount-timer__title">Скидка заканчивается</p>
+                <div class="product-data-wrapper__left-block">
+                    <div class="mian__discount-timer discount-timer">
+                        <p class="discount-timer__title">Скидка заканчивается</p>
 
-                <div>
-                    <div class="discount-timer__time fw-700" id="timer">
-                        <span>00</span>
-                        <span>23</span>
-                        <span>00</span>
-                        <span>00</span>
+                        <div>
+                            <div class="discount-timer__time fw-700" id="timer">
+                                <span>00</span>
+                                <span>23</span>
+                                <span>00</span>
+                                <span>00</span>
+                            </div>
+
+                            <div class="discount-timer__time-sign fs-xss">
+                                <span>День</span>
+                                <span>Час</span>
+                                <span>Мин</span>
+                                <span>Сек</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="discount-timer__btn fw-600">Купить</a>
+
+                        <button class="discount-timer__close-btn" onclick="hideParent(this)"></button>
                     </div>
 
-                    <div class="discount-timer__time-sign fs-xss">
-                        <span>День</span>
-                        <span>Час</span>
-                        <span>Мин</span>
-                        <span>Сек</span>
-                    </div>
-                </div>
+                    <div class="product-data-wrapper__sliders-wrapper">
+                        <div class="main__product-slider swiper can-be-viewed bg-second-gray">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product-preview__slider-card">
+                                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-preview__slider-card">
+                                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-preview__slider-card">
+                                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                                    </div>
+                                </div>
+                            </div>
 
-                <a href="#" class="discount-timer__btn fw-600">Купить</a>
+                            <div class="slider__pagination slider__pagination--bottom-center"></div>
 
-                <button class="discount-timer__close-btn" onclick="hideParent(this)"></button>
-            </div>
+                            <div class="badge badge--web-sales-leader">
+                                <span class="badge-icon"></span>
+                            </div>
 
-            <div class="main__primary-slider swiper can-be-viewed bg-second-gray">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="product-preview__slider-card">
-                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                            <a href="#" class="product-preview__image-link fw-600">Входит в образ</a>
+                        </div>
+
+                        <div class="main__product-type-selector swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="product-preview__slider-card">
-                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                </div>
+
+                <div class="main__size-chart size-chart fs-xxs">
+                    <div class="size-chart__header">
+                        <div>
+                            <button type="button" onclick="openPopup('size-table-popup')"
+                                class="size-chart__title">Таблица
+                                размеров</button>
+
+                            <a href="#" class="size-chart__size-type-link selected">RUS</a>
+                            <a href="#" class="size-chart__size-type-link">EU</a>
+                        </div>
+
+                        <button type="button" onclick="openPopup('size-notification-popup')"
+                            class="size-chart__more-sizes">Не
+                            нашли размер?</button>
+                    </div>
+
+                    <div class="size-chart__product-size-selector swiper slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide pr-s">
+                                <label for="size1" class="product-size-card product-size-card--less">37</label>
+                                <input hidden type="checkbox" name="size" id="size1" value="37">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size2"
+                                    class="product-size-card product-size-card--notification selected">38</label>
+                                <input hidden type="checkbox" name="size" id="size2" value="38" checked>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size3" class="product-size-card product-size-card--over">39</label>
+                                <input hidden type="checkbox" name="size" id="size3" value="39" disabled>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size4" class="product-size-card product-size-card--over">40</label>
+                                <input hidden type="checkbox" name="size" id="size4" value="40" disabled>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size5" class="product-size-card product-size-card">41</label>
+                                <input hidden type="checkbox" name="size" id="size5" value="41">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size6" class="product-size-card product-size-card">42</label>
+                                <input hidden type="checkbox" name="size" id="size6" value="42">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size7" class="product-size-card product-size-card">43</label>
+                                <input hidden type="checkbox" name="size" id="size7" value="43">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size9" class="product-size-card product-size-card"></label>
+                                <input hidden type="checkbox" name="size" id="size9" value="">
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="product-preview__slider-card">
-                            <img src="assets/image/slider-img/product1.png" alt="product img">
-                        </div>
-                    </div>
+
+                    <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a>
                 </div>
 
-                <div class="slider__pagination slider__pagination--bottom-center"></div>
+                <div class="main__link-wrapper">
+                    <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
+                        <p class="fw-600">Купить</p>
+                        <p class="fw-600">48 060 ₽</p>
+                    </button>
 
-                <div class="badge badge--web-sales-leader">
-                    <span class="badge-icon"></span>
-                </div>
-            </div>
-
-            <a href="#" class="product-preview__image-link fw-600">Входит в образ</a>
-        </div>
-
-        <div class="main__product-type-selector swiper slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-                    </a>
-                </div>
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-                    </a>
-                </div>
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-                    </a>
-                </div>
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
+                    <a href="#" class="main__basket-link">
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div class="main__size-chart size-chart fs-xxs">
-            <div class="size-chart__header">
-                <div>
-                    <button type="button" onclick="openPopup('size-table-popup')" class="size-chart__title">Таблица
-                        размеров</button>
-
-                    <a href="#" class="size-chart__size-type-link selected">RUS</a>
-                    <a href="#" class="size-chart__size-type-link">EU</a>
-                </div>
-
-                <button type="button" onclick="openPopup('size-notification-popup')" class="size-chart__more-sizes">Не
-                    нашли размер?</button>
-            </div>
-
-            <div class="size-chart__product-size-selector swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide pr-s">
-                        <label for="size1" class="product-size-card product-size-card--less">37</label>
-                        <input hidden type="checkbox" name="size" id="size1" value="37">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size2" class="product-size-card product-size-card--notification selected">38</label>
-                        <input hidden type="checkbox" name="size" id="size2" value="38" checked>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size3" class="product-size-card product-size-card--over">39</label>
-                        <input hidden type="checkbox" name="size" id="size3" value="39" disabled>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size4" class="product-size-card product-size-card--over">40</label>
-                        <input hidden type="checkbox" name="size" id="size4" value="40" disabled>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size5" class="product-size-card product-size-card">41</label>
-                        <input hidden type="checkbox" name="size" id="size5" value="41">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size6" class="product-size-card product-size-card">42</label>
-                        <input hidden type="checkbox" name="size" id="size6" value="42">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size7" class="product-size-card product-size-card">43</label>
-                        <input hidden type="checkbox" name="size" id="size7" value="43">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size9" class="product-size-card product-size-card"></label>
-                        <input hidden type="checkbox" name="size" id="size9" value="">
-                    </div>
-                </div>
-            </div>
-
-            <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a>
-        </div>
-
-        <div class="main__link-wrapper">
-            <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
-                <p class="fw-600">Купить</p>
-                <p class="fw-600">48 060 ₽</p>
-            </button>
-
-            <a href="#" class="main__basket-link">
-            </a>
         </div>
 
         <section class="main__about-payment about-payment about-payment--basket">
-            <div class="about-payment__title-wrapper mx-m" onclick="accordionState('about-payment', 'about-payment--hidden')">
-                <h3 class="about-payment__title">Oплата долями</h3>
-                <span class="about-payment__anchor-link"></span>
-            </div>
+            <div class="about-payment__text-wrapper">
+                <div class="about-payment__title-wrapper mx-m"
+                    onclick="accordionState('about-payment', 'about-payment--hidden')">
+                    <h3 class="about-payment__title">Oплата долями</h3>
+                    <span class="about-payment__anchor-link"></span>
+                </div>
 
-            <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
-                течение 8
-                недель. Без комиссий и переплат.</p>
+                <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
+                    течение 8
+                    недель. Без комиссий и переплат.</p>
+            </div>
 
             <div class="about-payment__cards-wrapper">
                 <div class="about-payment__card about-payment__card--selected">
@@ -394,94 +419,100 @@
             <h3 class="fs-s fw-800">Вместе дешевле!</h3>
         </div>
 
-        <div class="main__recommendations-slider swiper slider slider--with-arrows">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card pr-xxl">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
+        <div class="main__recommendations-wrapper">
+            <div class="main__recommendations-slider swiper slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
-                        </div>
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
 
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product1">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product1">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
+
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product2">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
 
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product2">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product3">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
+
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
+
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product4">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="card pr-xxl">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
-                        </div>
-
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product3">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
-                        </div>
-
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product4">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-button-prev slider__button"></div>
+                <div class="swiper-button-next slider__button"></div>
             </div>
 
-            <div class="swiper-button-prev slider__button"></div>
-            <div class="swiper-button-next slider__button"></div>
-        </div>
-
-        <div class="main__add-to-basket-btn add-to-basket-btn">
-            <p class="fw-900">В корзину</p>
-            <p class="add-to-basket-btn__cost fw-900 card__price">48 060</p>
-            <p class="add-to-basket-btn__sale fw-500 fs-s card__price">-6 340</p>
+            <div class="main__add-to-basket-btn add-to-basket-btn">
+                <p class="fw-900">В корзину</p>
+                <p class="add-to-basket-btn__cost fw-900 card__price">48 060</p>
+                <p class="add-to-basket-btn__sale fw-500 card__price">-6 340</p>
+            </div>
         </div>
 
         <div class="main__reviews-slider-wrapper reviews-slider-wrapper">
@@ -497,7 +528,7 @@
                         <li class="stars-wrapper__start--light"></li>
                     </ul>
 
-                    <span class="fs-s fw-400 ml-s">203</span>
+                    <span class="fw-400 ml-s">203</span>
                 </div>
             </div>
 
@@ -506,7 +537,7 @@
                     <div class="swiper-slide">
                         <div class="reviews-wrapper__review">
                             <div class="reviews-wrapper__user-info">
-                                <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                                <img src="/assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
                                 <p class="fw-700">Иван Иванов</p>
                             </div>
 
@@ -532,8 +563,8 @@
 
                             <div class="news-block__info-wrapper">
                                 <div>
-                                    <button class="news-block__opinion news-block__opinion--positive">24</button>
-                                    <button class="news-block__opinion news-block__opinion--negative">4</button>
+                                    <span class="news-block__opinion news-block__opinion--positive">24</span>
+                                    <span class="news-block__opinion news-block__opinion--negative">4</span>
                                 </div>
 
                                 <p class="fs-xss">11.02.2022</p>
@@ -543,7 +574,7 @@
                     <div class="swiper-slide">
                         <div class="reviews-wrapper__review">
                             <div class="reviews-wrapper__user-info">
-                                <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                                <img src="/assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
                                 <p class="fw-700">Иван Иванов</p>
                             </div>
 
@@ -564,8 +595,8 @@
 
                             <div class="news-block__info-wrapper">
                                 <div>
-                                    <button class="news-block__opinion news-block__opinion--positive">24</button>
-                                    <button class="news-block__opinion news-block__opinion--negative">4</button>
+                                    <span class="news-block__opinion news-block__opinion--positive">24</span>
+                                    <span class="news-block__opinion news-block__opinion--negative">4</span>
                                 </div>
 
                                 <p class="fs-xss">11.02.2022</p>
@@ -576,22 +607,22 @@
             </div>
 
             <div class="reviews-slider-wrapper__links-wrapper">
-                <button class="reviews-slider-wrapper__link" onclick="openPopup('reviews-list-popup')">Прочитать все
-                    отзыв</button>
-                <button class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight"
-                    onclick="openPopup('leave-review-popup')">Добавить
-                    отзыв</button>
+                <a href="#" class="reviews-slider-wrapper__link">Прочитать все отзыв</a>
+                <a href="#" class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight">Добавить
+                    отзыв</a>
             </div>
         </div>
 
-        <div class="main__block-title block-title">
-            <h3 class="fs-s fw-800">С этим товаром покупают</h3>
-        </div>
+        <div class="main__block-title main__block-title-with-filter-buttons">
+            <div class="block-title">
+                <h3 class="fs-s fw-800">С этим товаром покупают</h3>
+            </div>
 
-        <div class="filter-buttons mx-m mt-l bg-dark-white">
-            <button class="filter-buttons__btn filter-buttons__btn--active">Базовый</button>
-            <button class="filter-buttons__btn">Ультрамодный</button>
-            <button class="filter-buttons__btn">Премиум</button>
+            <div class="filter-buttons mt-l bg-dark-white">
+                <button class="filter-buttons__btn filter-buttons__btn--active">Базовый</button>
+                <button class="filter-buttons__btn">Ультрамодный</button>
+                <button class="filter-buttons__btn">Премиум</button>
+            </div>
         </div>
 
         <div class="main__slider swiper slider mt-l">
@@ -600,7 +631,7 @@
                     <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
+                            <p class="card__price product-card__price fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="card__description-wrapper">
@@ -617,7 +648,7 @@
                     <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
-                            <p class="card__price product-card__price fs-s fw-800 bg-white">
+                            <p class="card__price product-card__price fw-800 bg-white">
                                 <span class="card__price product-card__price-old">57 060</span>
                                 48 060
                             </p>
@@ -641,7 +672,7 @@
                     <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
+                            <p class="card__price product-card__price fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="card__description-wrapper">
@@ -658,7 +689,7 @@
                     <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
-                            <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
+                            <p class="card__price product-card__price fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="card__description-wrapper">
@@ -675,15 +706,18 @@
         </div>
 
         <div class="main__finished-image">
-            <div class="block-title">
-                <h3 class="fs-s fw-800">Готовый образ</h3>
-                <a href="#" class="block-title__more-link">все</a>
-            </div>
 
-            <div class="filter-buttons mt-xl bg-white">
-                <button class="filter-buttons__btn filter-buttons__btn--active">Образы с этим товаром</button>
-                <button class="filter-buttons__btn">Хиты</button>
-                <button class="filter-buttons__btn">Премиум</button>
+            <div class="main__block-title-with-filter-buttons">
+                <div class="block-title">
+                    <h3 class="fs-s fw-800">Готовый образ</h3>
+                    <a href="#" class="block-title__more-link">все</a>
+                </div>
+
+                <div class="filter-buttons mt-xl bg-white">
+                    <button class="filter-buttons__btn filter-buttons__btn--active">Образы с этим товаром</button>
+                    <button class="filter-buttons__btn">Хиты</button>
+                    <button class="filter-buttons__btn">Премиум</button>
+                </div>
             </div>
 
             <div class="swiper slider">
@@ -692,7 +726,7 @@
                         <a href="#" class="card product-card--mark-favorite">
                             <div class="card__img-wrapper card__img-wrapper--round product-card__img-wrapper--kit-img">
                                 <img src="assets/image/slider-img/kit1.png" alt="product img">
-                                <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
+                                <p class="card__price product-card__price fw-800 bg-white">48 060</p>
                             </div>
 
                             <div class="card__description-wrapper ml-0">
@@ -708,7 +742,7 @@
                         <a href="#" class="card">
                             <div class="card__img-wrapper card__img-wrapper--round product-card__img-wrapper--kit-img">
                                 <img src="assets/image/slider-img/kit2.png" alt="product img">
-                                <p class="product-card__price fs-s fw-800 bg-white">
+                                <p class="product-card__price fw-800 bg-white">
                                     48 060
                                 </p>
                             </div>
@@ -722,51 +756,57 @@
                             </div>
                         </a>
                     </div>
+                    <div class="swiper-slide slider__slide">
+                        <a href="#" class="card card--empty product-card__img-wrapper--kit-img">
+                            <p>Посмотреть все образы</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="stylist-consultation">
-            <div class="stylist-consultation__title-wrapper">
-                <h1 class="stylist-consultation__title">Консультация стилиста</h1>
-                <a href="#" class="stylist-consultation__info-btn"></a>
-            </div>
-
-            <p class="mt-m">Краткое описание услуги Lorem ipsum dolor sit amet consectetur.psum dolor sit amet
-                consectetur.</p>
-
-            <p class="stylist-consultation__price">8 000</p>
-
-            <div class="stylist-consultation__steps-wrapper">
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-
-            <button class="stylist-consultation__btn color-white"
-                onclick="openPopup('stylist-consultation-popup')">Получить консультаци</button>
+    <div class="stylist-consultation__left-panel-wrapper">
+        <div class="stylist-consultation__title-wrapper">
+            <h1 class="stylist-consultation__title">Консультация стилиста</h1>
+            <a href="#" class="stylist-consultation__info-btn"></a>
         </div>
+
+        <p class="mt-m">Краткое описание услуги Lorem ipsum dolor sit amet consectetur.psum dolor sit amet
+            consectetur.</p>
+
+        <p class="stylist-consultation__price">8 000</p>
+    </div>
+
+    <div class="stylist-consultation__steps-wrapper">
+        <div class="stylist-consultation__step">
+            <div class="stylist-consultation__step-info">
+                <span class="stylist-consultation__step-title"></span>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="stylist-consultation__step">
+            <div class="stylist-consultation__step-info">
+                <span class="stylist-consultation__step-title"></span>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="stylist-consultation__step">
+            <div class="stylist-consultation__step-info">
+                <span class="stylist-consultation__step-title"></span>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="stylist-consultation__btn">Получить консультацию</a>
+</div>
 
         <div class="main__brand-baner">
             <section class="banner__wrapper color-white fs-xxs bg-black">
                 <div class="banner__header">
                     <div class="banner__logo-and-link-wrapper">
-                        <img class="banner__brand-logo" src="assets/image/Yeezy-logo.svg"></img>
+                        <img class="banner__brand-logo" src="/assets/image/Yeezy-logo.svg"></img>
 
                         <a href="#" class="banner__brand-link fs-xss fw-300">
                             <p class="banner__brand-name fw-800">NIKE</p>
@@ -887,14 +927,16 @@
             </div>
         </div>
 
-        <div class="main__block-title block-title">
-            <h3 class="fs-s fw-800">Для вас</h3>
-            <a href="#" class="block-title__more-link">все</a>
-        </div>
+        <div class="main__block-title main__block-title-with-filter-buttons">
+            <div class="block-title">
+                <h3 class="fs-s fw-800">Для вас</h3>
+                <a href="#" class="block-title__more-link">все</a>
+            </div>
 
-        <div class="filter-buttons mx-m mt-l bg-dark-white">
-            <button class="filter-buttons__btn filter-buttons__btn--active">Вам может понравиться</button>
-            <button class="filter-buttons__btn">Вы недавно смотрели</button>
+            <div class="filter-buttons mx-m mt-l bg-dark-white">
+                <button class="filter-buttons__btn filter-buttons__btn--active">Вам может понравиться</button>
+                <button class="filter-buttons__btn">Вы недавно смотрели</button>
+            </div>
         </div>
 
         <div class="main__slider swiper slider mt-l">
@@ -903,7 +945,7 @@
                     <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
+                            <p class="card__price product-card__price fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="card__description-wrapper">
@@ -921,127 +963,144 @@
                     </a>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <a href="#" class="card card--empty">
+                    <a href="#" class="card card__img-wrapper card--empty">
                         <p>Посмотреть все образы</p>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="main__feedback-sections bg-second-gray">
-            <section class="main__faq-wrapper faq-wrapper">
-                <h1 class="faq-wrapper__title fs-s fw-800">Вопросы и ответы</h1>
+        <div class="main__feedback-sections">
+    
+    <section class="main__faq-wrapper faq-wrapper">
+        <div>
+            <h1 class="faq-wrapper__title fs-s fw-800">Вопросы и ответы</h1>
 
-                <div class="faq-wrapper__accordion faq-wrapper__accordion--open">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Как оформить заказ?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Выберите категорию или бренд в меню навигации или введите в поиске название интересующей
-                            вещи или тренда.
-                        </p>
-                    </div>
+            <div class="faq-wrapper__accordion faq-wrapper__accordion--open">
+                <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                    <h4>
+                        Как оформить заказ?
+                    </h4>
+                    <div class="faq-wrapper__accordion-condition"></div>
+                </button>
+                <div class="faq-wrapper__accordion-content fw-300">
+                    <p>
+                        Выберите категорию или бренд в меню навигации или введите в поиске название интересующей
+                        вещи или тренда.
+                    </p>
                 </div>
+            </div>
 
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Могу ли я оформить заказ через менеджеров?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Atque eius eos iure commodi consequatur
-                            sapiente inventore, facere itaque. Quod a perspiciatis in, animi corrupti necessitatibus
-                            pariatur nesciunt vel vero at.
-                        </p>
-                    </div>
+            <div class="faq-wrapper__accordion">
+                <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                    <h4>
+                        Могу ли я оформить заказ через менеджеров?
+                    </h4>
+                    <div class="faq-wrapper__accordion-condition"></div>
+                </button>
+                <div class="faq-wrapper__accordion-content fw-300">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque eius eos iure commodi consequatur
+                        sapiente inventore, facere itaque. Quod a perspiciatis in, animi corrupti necessitatibus
+                        pariatur nesciunt vel vero at.
+                    </p>
                 </div>
+            </div>
 
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Нужно ли регистрироваться на сайте чтобы сделать заказ?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Possimus officia facere, sint tempora
-                            mollitia cum necessitatibus, pariatur molestiae quibusdam commodi et explicabo ratione
-                            doloremque quaerat aliquid! Sequi perferendis inventore cum!
-                        </p>
-                    </div>
+            <div class="faq-wrapper__accordion">
+                <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                    <h4>
+                        Нужно ли регистрироваться на сайте чтобы сделать заказ?
+                    </h4>
+                    <div class="faq-wrapper__accordion-condition"></div>
+                </button>
+                <div class="faq-wrapper__accordion-content fw-300">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Possimus officia facere, sint tempora
+                        mollitia cum necessitatibus, pariatur molestiae quibusdam commodi et explicabo ratione
+                        doloremque quaerat aliquid! Sequi perferendis inventore cum!
+                    </p>
                 </div>
+            </div>
 
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>Как найти товары?</h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Rerum molestiae itaque earum alias et.
-                            Earum sint a exercitationem quaerat inventore impedit, placeat facilis ipsa provident
-                            consequatur, omnis rerum officia fugit.
-                        </p>
-                    </div>
+            <div class="faq-wrapper__accordion">
+                <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                    <h4>Как найти товары?</h4>
+                    <div class="faq-wrapper__accordion-condition"></div>
+                </button>
+                <div class="faq-wrapper__accordion-content fw-300">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Rerum molestiae itaque earum alias et.
+                        Earum sint a exercitationem quaerat inventore impedit, placeat facilis ipsa provident
+                        consequatur, omnis rerum officia fugit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-wrapper__megaphone"></div>
+    </section>
+    
+
+    
+
+    
+    <div class="main__communication-blocks-wrapper">
+        <section class="communication-block communication-block--with-img color-white">
+            <div class="communication-block__content-wrapper">
+                <h3 class="communication-block__title">Нужна помощь?</h3>
+                <p class="communication-block__sub-title">
+                    Наши консультанты будут рады ответить на Ваши вопросы.
+                </p>
+            </div>
+
+            <div class="communication-block__btns-wrapper">
+                <button class="communication-block__btn p-s">написать</button>
+                <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
+            </div>
+        </section>
+
+        <div class="main__communication-block-and-interview-card-wrapper">
+            <section class="communication-block bg-off-white color-second-black">
+                <div class="communication-block__content-wrapper">
+                    <h3 class="communication-block__title">подпишитесь</h3>
+                    <p class="communication-block__text">
+                        Оставьте свой e-mail, чтобы первыми узнать о старте
+                        SALE и новых поступлениях
+                    </p>
+
+                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
+                        name="mail">
+
+                    <p class="communication-block__sub-text fs-xss">
+                        Подписываясь на рассылку, вы подтверждаете свое согласие с
+                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
+                    </p>
                 </div>
             </section>
 
-            <div class="main__communication-blocks-wrapper">
-                <section class="communication-block communication-block--with-img color-white">
-                    <div class="communication-block__content-wrapper">
-                        <h3 class="communication-block__title">Нужна помощь?</h3>
-                        <p class="communication-block__sub-title">
-                            Наши консультанты будут рады ответить на Ваши вопросы.
-                        </p>
-                    </div>
-
-                    <div class="communication-block__btns-wrapper">
-                        <button class="communication-block__btn p-s">написать</button>
-                        <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
-                    </div>
-                </section>
-
-                <section class="communication-block bg-off-white color-second-black">
-                    <div class="communication-block__content-wrapper">
-                        <h3 class="communication-block__title">подпишитесь</h3>
-                        <p class="communication-block__text">
-                            Оставьте свой e-mail, чтобы первыми узнать о старте
-                            SALE и новых поступлениях
-                        </p>
-
-                        <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
-                            name="mail">
-
-                        <p class="communication-block__sub-text fs-xss">
-                            Подписываясь на рассылку, вы подтверждаете свое согласие с
-                            <a class="color-second-black" href="#">политикой конфиденциальности.</a>
-                        </p>
-                    </div>
-                </section>
-            </div>
-
-            <div class="main__chat-wrapper">
-                <button class="chat fw-700 color-white bg-black">
-                    <div class="chat__points">
-                        <span class="chat__point bg-white"></span>
-                        <span class="chat__point bg-white"></span>
-                        <span class="chat__point bg-white"></span>
-                    </div>
-                    <p>чат</p>
-                </button>
-            </div>
+            <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
+                <h3 class="interview-card__title">Опрос</h3>
+                <p>Сделаем сайт лучше</p>
+            </a>
         </div>
+    </div>
+    
+
+    <div class="main__chat-wrapper">
+        <button class="chat fw-700 color-white bg-black">
+            <div class="chat__points">
+                <span class="chat__point bg-white"></span>
+                <span class="chat__point bg-white"></span>
+                <span class="chat__point bg-white"></span>
+            </div>
+            <p>чат</p>
+        </button>
+    </div>
+</div>
     </main>
 
     <div class="popup--hidden" id="size-table-popup">
@@ -1230,7 +1289,7 @@
             <div class="reviews-wrapper">
                 <div class="reviews-wrapper__review">
                     <div class="reviews-wrapper__user-info">
-                        <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                        <img src="/assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
                         <p class="fw-700">Иван Иванов</p>
                     </div>
 
@@ -1260,7 +1319,7 @@
 
                 <div class="reviews-wrapper__review">
                     <div class="reviews-wrapper__user-info">
-                        <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                        <img src="/assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
                         <p class="fw-700">Иван Иванов</p>
                     </div>
 
@@ -1616,38 +1675,38 @@
     <nav class="bottom-nav">
     <ul>
         <li>
-            <!-- <a href="/myreact.github.io/" class="bottom-nav__link bottom-nav__link--highlighted "> -->
-            <a href="/myreact.github.io/" class="bottom-nav__link bottom-nav__link--highlighted">
+            <!-- <a href="/" class="bottom-nav__link bottom-nav__link--highlighted "> -->
+            <a href="/" class="bottom-nav__link bottom-nav__link--highlighted">
                 <img src="assets/image/bottom-nav/home.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fw-800 fs-xss">Главная</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/catalog.html" class="bottom-nav__link ">
+            <a href="/catalog.html" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/catalog.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Каталог</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/basket.html" class="bottom-nav__link ">
+            <a href="/basket.html" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/basket.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Корзина</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/" class="bottom-nav__link ">
+            <a href="/" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/images.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Образы</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/cabinet.html" class="bottom-nav__link ">
+            <a href="/cabinet.html" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/profile.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Профиль</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/" class="bottom-nav__link ">
+            <a href="/" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/chat.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Чат</p>
             </a>
@@ -1699,7 +1758,7 @@
     <!-- Функционал выбора размера -->
     <script src="assets/js/size-selector.js"></script>
     <!-- ### -->
-    
+
     <!-- Функционал таймер -->
     <script src="assets/js/timer.js"></script>
     <!-- ### -->
@@ -1709,7 +1768,7 @@
 
         for (const elem of elems) textToEllipsis(elem);
 
-        startCountdown(new Date("December 11, 2023 23:59:59").getTime());
+        startCountdown(new Date("December 30, 2023 23:59:59").getTime());
     </script>
 </body>
 

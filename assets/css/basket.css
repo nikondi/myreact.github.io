@@ -74,6 +74,9 @@
   opacity: 1;
 }
 
+.basket .basket--desktop {
+  display: none;
+}
 .basket__stages {
   display: flex;
   justify-content: space-between;
@@ -83,7 +86,7 @@
 }
 .basket__stages--second::before {
   content: "";
-  width: calc(32% - 23px);
+  width: calc(50% - 27px);
   height: 2px;
   z-index: 1;
   top: 11px;
@@ -93,7 +96,7 @@
 }
 .basket__stages--third::before {
   content: "";
-  width: calc(62% - 23px);
+  width: calc(98% - 34px);
   height: 2px;
   z-index: 1;
   top: 11px;
@@ -113,7 +116,7 @@
 }
 .basket__stages::after {
   content: "";
-  width: calc(100% - 80px);
+  width: calc(100% - 50px);
   height: 2px;
   z-index: -1;
   top: 11px;
@@ -874,4 +877,188 @@
 }
 .basket__sum--third {
   margin-bottom: 45px;
+}
+.basket__feedback--hidden {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .main__feedback-sections {
+    display: block;
+  }
+  .basket .basket__stages {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 106px;
+    margin-bottom: 39px;
+  }
+  .basket .basket__stages .basket__stage {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+  }
+  .basket .basket__stages .basket__stage::before {
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    top: -23px;
+  }
+  .basket .basket__stages::after {
+    width: calc(100% - 69px);
+    top: -2px;
+  }
+  .basket .basket__shareBtn {
+    display: none;
+  }
+  .basket .basket__sum--hidden {
+    display: none;
+  }
+  .basket .basket__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .basket .basket__form .basket__list {
+    width: 45%;
+    margin-left: 100px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__image-wrapper {
+    width: 262px;
+    height: 190px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__image-wrapper img {
+    width: 50%;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__item-title {
+    font-size: 24px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__item-prop {
+    font-size: 20px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__item-sizes .basket__item-btn {
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__item-price {
+    font-size: 24px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__item-count {
+    font-size: 20px;
+  }
+  .basket .basket__form .basket__list .basket__item .basket__item-btns {
+    gap: 10px;
+  }
+  .basket .basket__form .basket__container {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+  }
+  .basket .basket__form .basket__container .basket__isPresent {
+    order: 1;
+    padding: 43px 20px;
+  }
+  .basket .basket__form .basket__container .basket__isPresent::after {
+    background-repeat: no-repeat;
+    width: 142px;
+    height: 142px;
+    background-size: 100%;
+    bottom: -21px;
+  }
+  .basket .basket__form .basket__container .basket__isPresent .basket__isPresent-label {
+    font-size: 24px;
+    width: auto;
+    align-items: center;
+  }
+  .basket .basket__form .basket__container .basket__isPresent .basket__isPresent-label .basket__presentBtn {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .basket .basket__form .basket__container .basket__isPresent .basket__isPresent-label .basket__presentBtn svg {
+    width: 30px;
+    height: 30px;
+  }
+  .basket .basket__form .basket__container .basket__promocode {
+    order: 2;
+  }
+  .basket .basket__form .basket__container .basket__promocode .basket__promocode-label {
+    font-size: 18px;
+  }
+  .basket .basket__form .basket__container .basket__promocode .basket__promocode-input {
+    padding: 24px 20px;
+    font-size: 18px;
+  }
+  .basket .basket__form .basket__container .basket__promocode .basket__promocode-btn {
+    font-size: 24px;
+    top: 32px;
+  }
+  .basket .basket__form .basket__container .basket--desktop {
+    display: block;
+    order: 3;
+    margin-bottom: 17px;
+  }
+  .basket .basket__form .basket__container .basket--desktop .about-payment__label {
+    font-size: 24px;
+  }
+  .basket .basket__form .basket__container .basket--desktop .about-payment__price {
+    color: #3075FC;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .basket .basket__form .basket__container .basket--desktop .about-payment__title-wrapper {
+    padding: 31px 23px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .basket .basket__form .basket__container .basket--desktop .about-payment__text {
+    color: #48455C;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .basket .basket__form .basket__container .basket--desktop .about-payment__cards-wrapper {
+    justify-content: space-between;
+    padding-left: 0;
+    margin: 18px 31px;
+  }
+  .basket .basket__form .basket__container .basket__banner {
+    order: 4;
+    padding: 34px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .basket .basket__form .basket__container .basket__banner .basket__baner-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .basket .basket__form .basket__container .basket__banner .basket__baner-text {
+    font-size: 18px;
+    width: 60%;
+  }
+  .basket .basket__form .basket__btnSubmit {
+    width: 45%;
+    margin-left: 100px;
+    margin-top: -116px;
+    height: 70px;
+    align-items: center;
+  }
+  .basket .basket__product-title {
+    margin-left: 100px;
+    margin-bottom: 56px;
+  }
+  .basket .basket__product-list {
+    padding: 0 100px;
+  }
+  .basket .basket--mobile {
+    display: none;
+  }
+  .basket .basket__feedback--hidden {
+    display: block;
+  }
 }

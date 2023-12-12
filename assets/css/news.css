@@ -18,6 +18,9 @@
     font-size: calc(10px + 13.6 * (100vw - 430px) / 1920);
   }
 }
+.main__title-wrapper {
+  margin-left: 0;
+}
 .main__open-news {
   display: flex;
   flex-direction: column;
@@ -28,6 +31,16 @@
   margin-top: 5px;
   padding-top: 0;
 }
+.main__open-news > .open-news__img {
+  display: flex;
+  margin: auto;
+}
+.main__open-news > .open-news__img > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+}
 .main__block-title {
   margin-top: 51px;
 }
@@ -35,6 +48,48 @@
   padding: 0 15px;
 }
 
+@media (min-width: 1200px) {
+  .header {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 81px;
+  }
+  .main__open-news, .main__block-title {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .main__slider {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 194px;
+  }
+  .main__title-wrapper {
+    margin-bottom: 30px;
+  }
+  .main__open-news {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr auto;
+    grid-auto-columns: 100%;
+    grid-auto-flow: dense;
+    gap: 30px;
+  }
+  .main__open-news > .open-news__img {
+    margin: 0;
+    justify-content: right;
+    max-width: 845px;
+    grid-column: 2/3;
+    grid-row: 1/-4;
+  }
+  .main__open-news > .open-news__img > img {
+    width: unset;
+  }
+  .main__open-news > .news-block__info-wrapper {
+    grid-column: 1;
+  }
+}
 .news-block__info-wrapper {
   display: flex;
   justify-content: space-between;
@@ -58,20 +113,30 @@
   color: #3075FC;
 }
 .news-block__opinion--positive::before {
-  background: center/cover no-repeat url("../image/smile.svg");
+  background: center/cover no-repeat url("/assets/image/smile.svg");
 }
 .news-block__opinion--negative {
   color: #F91818;
 }
 .news-block__opinion--negative::before {
-  background: center/cover no-repeat url("../image/sad.svg");
+  background: center/cover no-repeat url("/assets/image/sad.svg");
 }
 .news-block__heart {
   min-width: 16px;
   min-height: 16px;
-  background: center/cover no-repeat url("../image/heart.svg");
+  background: center/cover no-repeat url("/assets/image/heart.svg");
 }
 
+@media (min-width: 1200px) {
+  .news-block__opinion::before {
+    width: 24px;
+    height: 24px;
+  }
+  .news-block__heart {
+    min-width: 26px;
+    min-height: 26px;
+  }
+}
 .open-news__img {
   width: 100%;
   max-width: 553px;

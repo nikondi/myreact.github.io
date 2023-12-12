@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Корзина</title>
-	<base href="/myreact.github.io/"/>
 
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
@@ -22,14 +21,14 @@
 
 <body>
     <div class="top-block color-white bg-black">
-        <a class="top-block__text mb-s fs-xss">
-            Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
-        </a>
-    </div>
+    <a class="top-block__text fs-xss">
+        Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
+    </a>
+</div>
 
     <header class="header mx-m">
         <div class="header__logo-and-basket-wrapper my-m">
-    <a href="/myreact.github.io/" class="logo">myreact</a>
+    <a href="/" class="logo">myreact</a>
     <button class="header__basket bg-second-gray"></button>
 </div>
 
@@ -67,9 +66,6 @@
             </span>
             <span class="basket__stage basket__stage--active">
                 Оплата
-            </span>
-            <span class="basket__stage">
-                Оформить
             </span>
         </div>
 
@@ -186,7 +182,7 @@
                             <label for="number" class="basket__pay-info-label">Номер карты</label>
                             <input type="number" id="number" class="basket__pay-info-input">
                         </p>
-                        
+
                         <div class="basket__pay-info-block">
                             <p>
                                 <label for="date" class="basket__pay-info-label">Дата</label>
@@ -241,6 +237,65 @@
             </div>
         </form>
 
+        <div class="main__feedback-sections">
+    
+
+    
+
+    
+    <div class="main__communication-blocks-wrapper">
+        <section class="communication-block communication-block--with-img color-white">
+            <div class="communication-block__content-wrapper">
+                <h3 class="communication-block__title">Нужна помощь?</h3>
+                <p class="communication-block__sub-title">
+                    Наши консультанты будут рады ответить на Ваши вопросы.
+                </p>
+            </div>
+
+            <div class="communication-block__btns-wrapper">
+                <button class="communication-block__btn p-s">написать</button>
+                <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
+            </div>
+        </section>
+
+        <div class="main__communication-block-and-interview-card-wrapper">
+            <section class="communication-block bg-off-white color-second-black">
+                <div class="communication-block__content-wrapper">
+                    <h3 class="communication-block__title">подпишитесь</h3>
+                    <p class="communication-block__text">
+                        Оставьте свой e-mail, чтобы первыми узнать о старте
+                        SALE и новых поступлениях
+                    </p>
+
+                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
+                        name="mail">
+
+                    <p class="communication-block__sub-text fs-xss">
+                        Подписываясь на рассылку, вы подтверждаете свое согласие с
+                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
+                    </p>
+                </div>
+            </section>
+
+            <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
+                <h3 class="interview-card__title">Опрос</h3>
+                <p>Сделаем сайт лучше</p>
+            </a>
+        </div>
+    </div>
+    
+
+    <div class="main__chat-wrapper">
+        <button class="chat fw-700 color-white bg-black">
+            <div class="chat__points">
+                <span class="chat__point bg-white"></span>
+                <span class="chat__point bg-white"></span>
+                <span class="chat__point bg-white"></span>
+            </div>
+            <p>чат</p>
+        </button>
+    </div>
+</div>
     </main>
 
     <footer class="footer bg-black">
@@ -304,38 +359,38 @@
     <nav class="bottom-nav">
     <ul>
         <li>
-            <!-- <a href="/myreact.github.io/" class="bottom-nav__link bottom-nav__link--highlighted "> -->
-            <a href="/myreact.github.io/" class="bottom-nav__link bottom-nav__link--highlighted">
+            <!-- <a href="/" class="bottom-nav__link bottom-nav__link--highlighted "> -->
+            <a href="/" class="bottom-nav__link bottom-nav__link--highlighted">
                 <img src="assets/image/bottom-nav/home.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fw-800 fs-xss">Главная</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/catalog.html" class="bottom-nav__link ">
+            <a href="/catalog.html" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/catalog.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Каталог</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/basket.html" class="bottom-nav__link active">
+            <a href="/basket.html" class="bottom-nav__link active">
                 <img src="assets/image/bottom-nav/basket.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Корзина</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/" class="bottom-nav__link ">
+            <a href="/" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/images.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Образы</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/cabinet.html" class="bottom-nav__link ">
+            <a href="/cabinet.html" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/profile.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Профиль</p>
             </a>
         </li>
         <li>
-            <a href="/myreact.github.io/" class="bottom-nav__link ">
+            <a href="/" class="bottom-nav__link ">
                 <img src="assets/image/bottom-nav/chat.svg" alt="page-icon" class="bottom-nav__page-icon">
                 <p class="bottom-nav__page-title fs-xss">Чат</p>
             </a>
